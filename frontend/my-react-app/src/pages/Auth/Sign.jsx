@@ -4,6 +4,7 @@ import {useState} from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Input from "../../components/input/input";
 import {validateEmail} from "../../utils/helper";
+import ProfilePhotoSelector from "../../components/input/ProfilePhotoSelector";
 
 const Sign = () => {
   const [profilePic,setProfilePic] = useState(null);
@@ -12,8 +13,51 @@ const Sign = () => {
   const [password,setPassword] = useState("");
   const [error,setError] = useState("");
   const navigete = useNavigate();
+  const hangleSingnUP = async(e) => {
+    e.preventDefault();
+    let profileImageUrl = "";
+    if (!fullname) {
+      setError("Please enter yor name");
+      return;
+    }
+
+    if(!validateEmail(email)) {
+      setError("Please enter a valid email addresss");
+      return;
+    }
+
+    if(!password) {
+      setError("Please enter the password");
+      return;
+    }
+    setError("");
+
+  };
   return (
-    <div>Sign</div>
+    <AuthLayout>
+      <div className="lg:w-[100%] h-auto md:h-full mt-10 md:mt-0 flex flex-col justify-center">
+        <h3 className="text-xl font-semibold text-black">Create an Account</h3>
+        <p className="text-xs text-slate-700 mt-[5px] mb-6">Join us today by entering your details below.</p>
+        <form action="" onSubmit={hangleSingnUP}>
+          <ProfilePhotoSelector image={profilePic} setImage={setProfilePic} />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <Input value={fullname} onChange={({ target}) => setFullName(target.value)}
+            label="Full Name" placeholder="Pyae Phyo Khant" type="text"></Input>
+            <Input value={email} onChange={({target}) => setEmail(target.value)} label="Email Address" placeholder="Admin@gmail.com" type="text"/>
+            <div className="col-span-2">
+              <Input value={password} onChange={({target}) => setEmail(target.value)} label="Password" placeholder="Min 8 Character" type="password"/>
+              {error && <p className="text-red-500 text-xs pb-2.5">{error}</p>}
+              <button type="submit" className="btn-primary">Login</button>
+              <p className="text-[13px] text-slate-800">Already have an account? {""}
+                <Link className="font-medium text-primary underline" to="/login">Login</Link>
+              </p>
+            </div>
+            
+            
+          </div>
+        </form>
+      </div>
+    </AuthLayout>
   )
 }
 
