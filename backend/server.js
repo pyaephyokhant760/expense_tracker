@@ -5,6 +5,7 @@ const path = require("path");
 const { connect } = require("http2");
 const connectDB = require("./config/db");
 const AuthRouter = require("./routes/AuthRoutes");
+const logger = require("./log/logger");
 
 const app = express();
 
@@ -22,6 +23,8 @@ connectDB();
 
 app.use("/api/users", AuthRouter);
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 8000;
 
-app.listen(port, () => console.log(`Server is Running ${port}`));
+app.listen(port, () => {
+    logger.info(`Server is running on port ${port}`);
+});
