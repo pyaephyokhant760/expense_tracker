@@ -1,0 +1,28 @@
+2025-12-26T17:03:12.123Z [API Service] info: Server is running on port 8000
+2025-12-26T17:05:24.764Z [API Service] info: Server is running on port 8000
+2025-12-26T17:06:48.767Z [API Service] info: Server is running on port 8000
+2025-12-26T17:07:28.816Z [API Service] info: Server is running on port 8000
+2025-12-26T17:09:13.256Z [API Service] info: Server is running on port 8000
+2025-12-26T17:09:15.024Z [API Service] info: Server is running on port 8000
+2025-12-26T17:09:26.374Z [API Service] error: Server failed to start on port 8000
+2025-12-26T17:09:26.377Z [API Service] info: Server is running on port 8000
+2025-12-26T17:10:30.413Z [API Service] info: Server is running on port 8000
+2025-12-26T17:13:35.159Z [API Service] info: Server is running on port 8000
+2025-12-26T17:14:53.318Z [API Service] info: Server is running on port 8000
+2025-12-26T17:21:35.597Z [API Service] info: Server is running on port 8000
+2025-12-26T17:21:40.219Z [API Service] info: Server is running on port 8000
+2025-12-26T17:23:00.007Z [API Service] info: Server is running on port 8000
+2025-12-26T17:24:34.433Z [API Service] info: Server is running on port 8000
+2025-12-26T17:26:23.760Z [API Service] info: Server is running on port 8000
+2025-12-26T17:26:55.309Z [API Service] info: Server is running on port 8000
+2025-12-26T17:26:59.872Z [API Service] info: Server is running on port 8000
+2025-12-26T17:27:03.722Z [API Service] info: Server is running on port 8000
+2025-12-26T17:27:08.234Z [API Service] info: Server is running on port 8000
+2025-12-26T17:27:11.112Z [API Service] info: Server is running on port 8000
+2025-12-26T17:27:19.891Z [API Service] info: Server is running on port 8000
+2025-12-26T17:27:23.126Z [API Service] info: Server is running on port 8000
+2025-12-26T17:27:24.946Z [API Service] info: Server is running on port 8000
+2025-12-26T17:29:19.871Z [API Service] info: Server is running on port 8000
+2025-12-26T17:29:21.933Z [API Service] info: Server is running on port 8000
+2025-12-26T17:29:26.744Z [API Service] info: Server is running on port 8000
+2025-12-26T17:29:31.461Z [API Service] error: next is not a function
