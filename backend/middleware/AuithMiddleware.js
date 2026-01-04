@@ -2,7 +2,9 @@ const jwt = require('jsonwebtoken');
 const User = require("../models/User")
 
 exports.portect = async(req , res , next ) => {
-    const token = req.header.authorization?.split(' ')[1];
+    const authHeader = req.headers.authorization;
+    const token = authHeader.split(' ')[1];
+    
     if(!token){
         return res.status(401).json({ message: "No token, authorization denied." });
     }
