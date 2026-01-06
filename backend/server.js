@@ -6,6 +6,8 @@ const { connect } = require("http2");
 const connectDB = require("./config/db");
 const AuthRouter = require("./routes/AuthRoutes");
 const IncomeRouter = require("./routes/IncomeRoutes");
+const ExpenseRouter = require("./routes/ExpenseRoutes");
+const DashboardRouter = require("./routes/DashboardRoutes");
 const logger = require("./log/logger");
 
 const app = express();
@@ -24,6 +26,8 @@ connectDB();
 
 app.use("/api/users", AuthRouter);
 app.use("/api/income", IncomeRouter);
+app.use("/api/expense",ExpenseRouter);
+app.use('api/dashboard',DashboardRouter);
 
 
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
